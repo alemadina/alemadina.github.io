@@ -1,0 +1,20 @@
+body{
+    background-color: whitesmoke;
+    color: blue;
+}
+h1 {
+    text-align: center;
+  }
+input:valid,
+textarea:valid {
+    background: white;
+}
+input:invalid,
+textarea:invalid {
+    border-color: red;
+}
+div.relative {
+    position: relative;
+    top: -525px;
+    left: 600px;
+  }

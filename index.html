@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Final</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1> <u>CURRICULUM  VITAE</u> </h1>
+<!--    <form action="/action_page.php" method="get">   -->
+    <form action="/action_page.php" method="get">
+        <label for="apellido">Apellido/s:</label><br>
+            <input type="text" id="apellido" name="apellido" required maxlength="30"><br>
+        <label for="nombre">Nombre/s:</label><br>
+            <input type="text" id="nombre" name="nombre" required maxlength="30"><br>
+        <label for="fech-nac">Fecha Nacimiento:</label><br>
+            <input type="date" id="fech-nac" name="fech-nac" required><br>
+        <legend>CUIL:</legend>
+            <input type="number" id="pre-cuil" name="pre-cuil" required min="1" max="99">
+            <input type="number" id="med-cuil" name="med-cuil" required min="1" max="99999999">
+            <input type="number" id="pos-cuil" name="pos-cuil" required min="1" max="9"><br>
+        <label for="nacion">Nacionalidad:</label><br>
+            <select name="nacion" id="nacion">
+                <option value="Argentino">Argentino</option>
+                <option value="Extranjero">Extranjero</option>
+            </select><br>
+        <legend><u>Domicilio:</u></legend>
+            <label for="calle">Calle:</label>
+                <input type="text" id="calle" name="calle" required maxlength="30"><br>
+            <label for="nro-casa">Nro.:</label>
+                <input type="number" id="nro-casa" name="nro-casa" required min="1" max="99999"><br>
+            <label for="piso">Piso:</label>
+                <input type="number" id="piso" name="piso" min="1" max="999"><br>
+            <label for="depto">Dpto.:</label>
+                <input type="text" id="depto" name="depto" maxlength="2"><br>
+            <label for="localidad">Localidad:</label>
+                <input type="text" id="localidad" name="localidad" required maxlength="30"><br>
+            <label for="partido">Partido/Departamento:</label>
+                <input type="text" id="partido" name="partido" required maxlength="30"><br>
+            <label for="provincia">Provincia:</label>
+                <input type="text" id="provincia" name="provincia" required maxlength="30"><br>
+        <label for="telefono">Telefono:</label><br>
+            <input type="tel" name="telefono" id="telefono" required min="1" max="9999999999"><br>
+        <label for="mail">Email:</label><br>
+            <input type="Email" name="mail" id="mail" required><br>
+        <label for="sexo">Sexo:</label><br>
+            <select name="sexo" id="sexo">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select><br>
+        <label for="est-civil">Estado Civil:</label><br>
+            <select name="est-civil" id="est-civil">
+                <option value="Soltero">Soltero/a</option>
+                <option value="Casado">Casado/a</option>
+                <option value="Viudo">Viudo/a</option>
+                <option value="Divorciado">Divorciado/a</option>
+            </select><br>
+        <label for="hijos">Hijos:</label><br>
+            <input type="number" id="hijos" name="hijos"><br>
+
+        <div class="relative">
+        <label for="archivo">Si lo desea puede agregar una foto:</label>
+            <input type="file" id="archivo" name="archivo" onchange="previewFile()"><br>
+            <img src="" height="200" width="200" alt="El Curriculum no llevara foto">
+            <script src="js/visual-foto.js"></script><br>
+        <label for="estudios">Estudios:</label><br>
+            <select name="estudios" id="estudios" onchange="carg(this);">
+                <option value="NoPosee">No Posee</option>
+                <option value="PrimIncompl">Primario Incompleto</option>
+                <option value="PrimCompl">Primario Completo</option>
+                <option value="SecIncompl">Secundario Incompleto</option>
+                <option value="SecCompl">Secundario Completo</option>
+                <option value="TercIncompl">Terciario Incompleto</option>
+                <option value="TercCompl">Terciario Completo</option>
+                <option value="UnivIncompl">Universitario Incompleto</option>
+                <option value="UnivCompl">Universitario Completo</option>
+            </select><br>
+        <label>Antedecentes Laborales:</label><br>
+            <label for="antec-1">01</label>
+                <input type="text" id="antec-1" name="antec-1"><br>
+            <label for="antec-2">02</label>
+                <input type="text" id="antec-2" name="antec-2"><br>
+            <label for="antec-3">03</label>
+                <input type="text" id="antec-3" name="antec-3"><br>
+            <label for="antec-4">04</label>
+                <input type="text" id="antec-4" name="antec-4"><br>
+            <label for="antec-5">05</label>
+                <input type="text" id="antec-5" name="antec-5"><br>
+            <label for="antec-6">06</label>
+                <input type="text" id="antec-6" name="antec-6"><br>
+            <label for="antec-7">07</label>
+                <input type="text" id="antec-7" name="antec-7"><br>
+            <label for="antec-8">08</label>
+                <input type="text" id="antec-8" name="antec-8"><br>
+            <label for="antec-9">09</label>
+                <input type="text" id="antec-9" name="antec-9"><br>
+            <label for="antec-10">10</label>
+                <input type="text" id="antec-10" name="antec-10"><br>             
+        <label for="coment">Comentarios:</label><br>
+            <textarea name="coment" id="coment" rows="10" cols="50"></textarea><br><br><br>
+
+        <label for="salir">Salir</label>
+            <input type="button" onclick="goHome();" value="salir">
+
+        <label for="continuar">Continuar</label>
+            <input type="submit" onclick="abrirVentana();" value="continuar">
+
+        <script src="js/ventana.js"></script>
+
+        <label for="enviar">Confirmar</label>
+            <input type="submit" value="enviar">
+        </div>
+    
+    </form>         
+
+</body>
+</html>
